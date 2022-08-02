@@ -1,0 +1,1 @@
+<img src="<?=SITE_DIR?>local/include/logo.png" class="logo__img" alt="">
