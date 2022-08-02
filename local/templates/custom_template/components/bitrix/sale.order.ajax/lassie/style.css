@@ -1,0 +1,14 @@
+.hide-block {
+    display: none;
+    visibility: hidden;
+
+}
+
+.checkbox_custom_elem {
+
+    transform: scale(1.5);
+    opacity: 0.9;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 0px;
+}

@@ -1,0 +1,1 @@
+<h3 class="footer__title">Покупки</h3>
