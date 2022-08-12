@@ -287,16 +287,14 @@ else
 					{
 						if ($actualItem['CAN_BUY'])
 						{
-							
+							echo 'hello';
 							?>
-							<div id="<?=$itemIds['BASKET_ACTIONS']?>">
-								<button class="btn"
-									id="<?=$itemIds['BUY_LINK']?>"
-									href="javascript:void(0)"
-									rel="nofollow">
-									<?=($arParams['ADD_TO_BASKET_ACTION'] === 'BUY' ? $arParams['MESS_BTN_BUY'] : $arParams['MESS_BTN_ADD_TO_BASKET'])?>
-								</button>
-							</div>
+							<div class="product-item-button-container" id="<?=$itemIds['BASKET_ACTIONS']?>">
+										<a class="btn btn-default <?=$buttonSizeClass?>" id="<?=$itemIds['BUY_LINK']?>"
+											href="javascript:void(0)" rel="nofollow">
+											<?=($arParams['ADD_TO_BASKET_ACTION'] === 'BUY' ? $arParams['MESS_BTN_BUY'] : $arParams['MESS_BTN_ADD_TO_BASKET'])?>
+										</a>
+									</div>
 							<?
 						}
 						else
@@ -319,19 +317,18 @@ else
 								);
 							}
 							?>
-							<button class="btn"
-								id="<?=$itemIds['NOT_AVAILABLE_MESS']?>"
-								href="javascript:void(0)"
-								rel="nofollow">
-								<?=$arParams['MESS_NOT_AVAILABLE']?>
-							</button>
+							<a class="btn btn-link <?=$buttonSizeClass?>" id="<?=$itemIds['NOT_AVAILABLE_MESS']?>"
+											href="javascript:void(0)" rel="nofollow">
+											<?=$arParams['MESS_NOT_AVAILABLE']?>
+										</a>
 							<?
 						}
 					}
 					else
 					{
 						if ($arParams['PRODUCT_DISPLAY_MODE'] === 'Y')
-						{
+						{ 
+							//echo 'hello';
 
 								if ($showSubscribe)
 								{

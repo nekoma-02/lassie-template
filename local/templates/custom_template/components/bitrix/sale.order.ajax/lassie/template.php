@@ -468,10 +468,7 @@ else
 					</fieldset>
 				<? endif ?>
 
-				<!--	ORDER SAVE BLOCK	-->
-				<div id="bx-soa-orderSave">
-					
-				</div>
+				
 
 				<div style="display: none;">
 					<div id='bx-soa-basket-hidden' class="bx-soa-section"></div>
@@ -494,9 +491,34 @@ else
 				</div>
 				
 			</div>
-			<a href="javascript:void(0)" class="btn btn-default btn-lg btn-order-save form__btn form__btn_align_right" data-save-button="true">
+			<!--	ORDER SAVE BLOCK	-->
+			<div id="bx-soa-orderSave">
+					<div class="checkbox">
+						<?
+						if ($arParams['USER_CONSENT'] === 'Y')
+						{
+							$APPLICATION->IncludeComponent(
+								'bitrix:main.userconsent.request',
+								'',
+								array(
+									'ID' => $arParams['USER_CONSENT_ID'],
+									'IS_CHECKED' => $arParams['USER_CONSENT_IS_CHECKED'],
+									'IS_LOADED' => $arParams['USER_CONSENT_IS_LOADED'],
+									'AUTO_SAVE' => 'N',
+									'SUBMIT_EVENT_NAME' => 'bx-soa-order-save',
+									'REPLACE' => array(
+										'button_caption' => isset($arParams['~MESS_ORDER']) ? $arParams['~MESS_ORDER'] : $arParams['MESS_ORDER'],
+										'fields' => $arResult['USER_CONSENT_PROPERTY_DATA']
+									)
+								)
+							);
+						}
+						?>
+					</div>
+					<a href="javascript:void(0)" class="btn btn-default btn-lg btn-order-save form__btn form__btn_align_right" data-save-button="true">
 						<?=$arParams['MESS_ORDER']?>
 					</a>
+				</div>
 		</div>
 	</form>
 

@@ -3113,7 +3113,7 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
 				
 			for (i = 0; i < this.result.GRID.HEADERS.length; i++) {
 				column = this.result.GRID.HEADERS[i];
-				console.log(column.name);
+				//console.log(column.name);
 				if (column.id === 'NAME' || column.id === 'PREVIEW_PICTURE' || column.id === 'PROPS' || column.id === 'NOTES')
 					continue;
 
@@ -3314,7 +3314,7 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
 				logotype = this.getImageSources(data, 'DETAIL_PICTURE');
 
 
-				console.log(logotype);
+				//console.log(logotype);
 			if (logotype && logotype.src_2x) {
 				logoNode.setAttribute('src', logotype.src_1x	
 				);
@@ -7354,7 +7354,7 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
 				className += ' bx-soa-cart-total-line-highlighted';
 			}
 
-			console.log(params);
+			//console.log(params);
 
 			return BX.create('DIV', {
 				props: { className: className },
