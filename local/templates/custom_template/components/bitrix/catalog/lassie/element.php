@@ -223,7 +223,7 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 			$componentElementParams['USER_CONSENT_IS_LOADED'] = $arParams['USER_CONSENT_IS_LOADED'];
 		}
 
-		//echo 'element.php: catalog.element' . '<br>';
+		echo 'element.php: catalog.element' . '<br>';
 		$elementId = $APPLICATION->IncludeComponent(
 			'bitrix:catalog.element',
 			'lassie',

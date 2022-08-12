@@ -2505,6 +2505,7 @@
 
 		basketResult: function(arResult)
 		{
+			console.log('wew');
 			var strContent = '',
 				strPict = '',
 				successful,

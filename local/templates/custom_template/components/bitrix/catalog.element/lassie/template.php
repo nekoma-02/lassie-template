@@ -19,6 +19,11 @@ $this->setFrameMode(true);
 $templateLibrary = array('popup', 'fx');
 $currencyList = '';
 
+// echo '<pre>';
+// print_r($arResult);
+// echo '</pre>';
+// die();
+
 if (!empty($arResult['CURRENCIES']))
 {
 	$templateLibrary[] = 'currency';
@@ -570,6 +575,15 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 									<?=$arParams['MESS_BTN_ADD_TO_BASKET']?>
 								</button>
 							<?php
+							$APPLICATION->IncludeComponent(
+								'bitrix:buy.oneclick',
+								'',
+								array(
+									"ID_PRODUCT" => $arResult["ID"],
+									"URL_FROM" => 'DETAIL PAGE'
+								),
+								false
+							);
 						}
 
 						// if ($showBuyBtn)
